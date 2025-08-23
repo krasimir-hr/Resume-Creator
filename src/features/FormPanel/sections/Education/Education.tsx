@@ -16,7 +16,7 @@ interface EducationProps {
 
 export default function Education({ data, onChange }: EducationProps) {
    return (
-      <section id="general-info">
+      <section id="education">
          <h3>Share your education journey</h3>
          <p>Include your higher education details-degree, courses, or institution.</p>
          <div className="inputs-container">

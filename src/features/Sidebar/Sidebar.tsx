@@ -21,6 +21,12 @@ export default function Sidebar() {
                <span>4</span>Finalize
             </li>
          </ul>
+         <p>Resume completeness:</p>
+         <div className="resume-completeness">
+            
+            <div></div>
+            <span id="completeness-pct">50%</span>
+         </div>
       </aside>
    );
 }

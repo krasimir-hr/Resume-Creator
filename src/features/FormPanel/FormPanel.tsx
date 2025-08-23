@@ -1,9 +1,9 @@
-import { useState } from "react";
-import GeneralInformation from "./sections/GeneralInfo/GeneralInfo";
-import WorkHistory from "./sections/WorkHistory/WorkHistory";
-import Education from "./sections/Education/Education";
+import { useState } from 'react';
+import GeneralInformation from './sections/GeneralInfo/GeneralInfo';
+import WorkHistory from './sections/WorkHistory/WorkHistory';
+import Education from './sections/Education/Education';
 
-import './FormPanel.scss'
+import './FormPanel.scss';
 
 export default function FormPanel() {
    const [generalInfo, setGeneralInfo] = useState({
@@ -14,7 +14,7 @@ export default function FormPanel() {
       postalCode: '',
       city: '',
       country: '',
-   })
+   });
 
    const [workHistory, setWorkHistory] = useState({
       jobTitle: '',
@@ -23,7 +23,7 @@ export default function FormPanel() {
       startDate: '',
       endDate: '',
       description: '',
-   })
+   });
 
    const [education, setEducation] = useState({
       diplomaName: '',
@@ -32,23 +32,13 @@ export default function FormPanel() {
       startDate: '',
       endDate: '',
       description: '',
-      })
+   });
 
    return (
       <div className="form-panel">
-         <GeneralInformation 
-            data={generalInfo}
-            onChange={setGeneralInfo}
-         />
-         <WorkHistory
-            data={workHistory}
-            onChange={setWorkHistory}
-         />
-         <Education
-            data={education}
-            onChange={setEducation}
-         />
-
+         <GeneralInformation data={generalInfo} onChange={setGeneralInfo} className="active" />
+         <WorkHistory data={workHistory} onChange={setWorkHistory} />
+         <Education data={education} onChange={setEducation} />
       </div>
-   )
+   );
 }

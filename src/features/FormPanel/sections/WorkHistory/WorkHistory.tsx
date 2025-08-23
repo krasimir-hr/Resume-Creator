@@ -16,7 +16,7 @@ interface WorkHistoryProps {
 
 export default function WorkHistory({ data, onChange }: WorkHistoryProps) {
    return (
-      <section id="general-info">
+      <section id="work-history">
          <h3>Tell us about your working experience</h3>
 
          <p>
