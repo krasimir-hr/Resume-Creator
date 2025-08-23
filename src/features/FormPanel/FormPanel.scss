@@ -1,0 +1,12 @@
+.inputs-container {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: auto auto;
+   gap: 15px 30px;;
+   width: 40vw;
+   min-width: 800px;
+
+   & > * {
+      width: 100%;
+   }
+}
