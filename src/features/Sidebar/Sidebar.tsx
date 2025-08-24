@@ -1,6 +1,10 @@
 import './Sidebar.scss';
 
-export default function Sidebar() {
+interface SidebarProps {
+   setActiveSection: (section: string) => void;
+}
+
+export default function Sidebar({ setActiveSection }: SidebarProps) {
    return (
       <aside>
          <div className="logo-container">
@@ -8,16 +12,16 @@ export default function Sidebar() {
          </div>
 
          <ul className="steps">
-            <li>
+            <li onClick={() => setActiveSection('general')}>
                <span>1</span>General Information
             </li>
-            <li>
+            <li onClick={() => setActiveSection('work')}>
                <span>2</span>Work history
             </li>
-            <li>
+            <li onClick={() => setActiveSection('education')}>
                <span>3</span>Education
             </li>
-            <li>
+            <li onClick={() => setActiveSection('final')}>
                <span>4</span>Finalize
             </li>
          </ul>

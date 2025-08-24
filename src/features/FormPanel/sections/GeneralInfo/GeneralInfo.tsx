@@ -15,12 +15,11 @@ interface GeneralInformationEntry {
 interface GeneralInformationProps {
    data: GeneralInformationEntry;
    onChange: (data: GeneralInformationEntry) => void;
-   className?: string;
 }
 
-export default function GeneralInformation({ data, onChange, className }: GeneralInformationProps) {
+export default function GeneralInformation({ data, onChange }: GeneralInformationProps) {
    return (
-      <section id="general-info" className={className}>
+      <section id="general-info">
          <h3>What’s the best way for employers to contact you?</h3>
          <p>We suggest including an email and phone number.</p>
 

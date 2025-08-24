@@ -1,14 +1,16 @@
-// import { useState } from 'react'
+import { useState } from 'react'
 import FormPanel from './features/FormPanel/FormPanel'
 import Sidebar from './features/Sidebar/Sidebar'
 
 import './App.scss'
 
 function App() {
+  const [activeSection, setActiveSection] = useState<string>('general');
+
   return (
     <div className="wrapper">
-      <Sidebar />
-      <FormPanel />
+      <Sidebar setActiveSection={setActiveSection}/>
+      <FormPanel activeSection={activeSection}/>
     </div>
   )
 }

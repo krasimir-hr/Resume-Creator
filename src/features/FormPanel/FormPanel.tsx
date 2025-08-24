@@ -5,7 +5,11 @@ import Education from './sections/Education/Education';
 
 import './FormPanel.scss';
 
-export default function FormPanel() {
+interface FormPanelProps {
+   activeSection: string;
+}
+
+export default function FormPanel({ activeSection }: FormPanelProps) {
    const [generalInfo, setGeneralInfo] = useState({
       firstName: '',
       lastName: '',
@@ -36,9 +40,9 @@ export default function FormPanel() {
 
    return (
       <div className="form-panel">
-         <GeneralInformation data={generalInfo} onChange={setGeneralInfo} className="active" />
-         <WorkHistory data={workHistory} onChange={setWorkHistory} />
-         <Education data={education} onChange={setEducation} />
+         {activeSection === 'general' && <GeneralInformation data={generalInfo} onChange={setGeneralInfo} />}
+         {activeSection === 'work' && <WorkHistory data={workHistory} onChange={setWorkHistory} />}
+         {activeSection === 'education' && <Education data={education} onChange={setEducation} />}
       </div>
    );
 }
