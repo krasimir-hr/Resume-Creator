@@ -1,0 +1,25 @@
+@import '../../variables';
+
+.next-button {
+   background-color: #e20b76;
+   color: #fff;
+   font-weight: 800;
+   transition: filter 0.3s ease;
+   border: none;
+   border-radius: 12px;
+   opacity: 0.9;
+   margin-left: auto;
+   margin-right: 30px;
+
+   &:hover {
+      filter: brightness(0.85);
+   }
+
+   &:disabled {
+      background-color: #646464;
+   }
+
+   &:disabled:hover {
+      filter: none;;
+   }
+}

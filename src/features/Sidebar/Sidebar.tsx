@@ -1,10 +1,11 @@
 import './Sidebar.scss';
 
 interface SidebarProps {
+   activeSection: string;
    setActiveSection: (section: string) => void;
 }
 
-export default function Sidebar({ setActiveSection }: SidebarProps) {
+export default function Sidebar({ activeSection, setActiveSection }: SidebarProps) {
    return (
       <aside>
          <div className="logo-container">
@@ -12,16 +13,16 @@ export default function Sidebar({ setActiveSection }: SidebarProps) {
          </div>
 
          <ul className="steps">
-            <li onClick={() => setActiveSection('general')}>
+            <li className={activeSection === 'general' ? 'active' : ''} onClick={() => setActiveSection('general')}>
                <span>1</span>General Information
             </li>
-            <li onClick={() => setActiveSection('work')}>
+            <li className={activeSection === 'work' ? 'active' : ''} onClick={() => setActiveSection('work')}>
                <span>2</span>Work history
             </li>
-            <li onClick={() => setActiveSection('education')}>
+            <li className={activeSection === 'education' ? 'active' : ''} onClick={() => setActiveSection('education')}>
                <span>3</span>Education
             </li>
-            <li onClick={() => setActiveSection('final')}>
+            <li className={activeSection === 'final' ? 'active' : ''} onClick={() => setActiveSection('final')}>
                <span>4</span>Finalize
             </li>
          </ul>

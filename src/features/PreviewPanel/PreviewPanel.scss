@@ -1,0 +1,78 @@
+.preview-wrapper {
+  flex: 1;               
+  height: 100vh;          
+  overflow-y: auto;        
+  display: flex;
+  justify-content: center; 
+  align-items: flex-start; 
+  background: #f3f3f3;    
+  padding: 1rem;
+}
+
+.preview-panel {
+   width: 794px;
+   height: 1123px;
+   margin: 20px;
+   padding: 20px;
+   background-color: #fff;
+   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+   .general-info-preview {
+      margin-bottom: 30px;
+      h3 {
+         text-transform: uppercase;
+         font-size: 30px;
+         letter-spacing: 4px;
+         text-align: center;
+         font-weight: 700;
+      }
+
+      .contact-info {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         gap: 20px;
+         div {
+            display: flex;
+         }
+      }
+   }
+
+   .section-preview {
+      margin-bottom: 40px;
+      p {
+         margin: 0;
+      }
+
+      h3 {
+         text-transform: uppercase;
+         letter-spacing: 5px;
+         border-bottom: 1px solid #9e9e9e;
+         font-weight: 800;
+      }
+
+      .header {
+         margin-top: 30px;
+         font-weight: 800;
+         display: flex;
+         justify-content: space-between;
+         text-transform: uppercase;
+      }
+
+      .institution-info {
+         display: flex;
+         gap: 10px;
+      }
+
+      .institution-name {
+         font-weight: 800;
+      }
+
+      .separator {
+         font-weight: 800;
+      }
+
+      .description {
+         margin-top: 10px;
+      }
+   }
+}

@@ -1,20 +1,44 @@
 .form-panel {
-   max-width: 50vw;
+   width: 40vw;
+   background-color: #fff;
+   .button-wrapper {
+      display: flex;
+   }
 }
 
 .inputs-container {
    display: grid;
    grid-template-columns: 1fr 1fr;
-   grid-template-rows: auto auto;
    gap: 15px 30px;;
 
    & > * {
       width: 100%;
    }
+
+   .bundled-inputs {
+      display: flex;
+      justify-content: space-between;
+      
+      & > * {
+         width: 45%;
+      }
+   }
+
+   textarea {
+      width: 100%;
+      height: calc(100% - 25px);
+      box-sizing: border-box;
+      border: 1px solid #000;
+      border-radius: 4px;
+   }
+
+   .text-area{ 
+      grid-row: span 2;
+   }
 }
 
 section {
-   padding: 30px 0 30px 100px;
+   padding: 30px;
 
    h3 {
       font-size: 32px;
@@ -28,7 +52,6 @@ section {
    }
 
    input {
-      margin-bottom: 18px;
    }
 }
 

@@ -1,6 +1,8 @@
+@import '../../variables';
+
 aside {
-   width: 190px;
-   background-color: #29524a;
+   width: 200px;
+   background-color: $primary-color;
    color: #fff;
    padding: 30px;
 
@@ -20,6 +22,14 @@ aside {
          align-items: center;
          gap: 10px;
          position: relative;
+
+         &.active {
+            font-weight: 800;
+         }
+
+         &:hover {
+            cursor: pointer;
+         }
 
          &::after {
             content: '';

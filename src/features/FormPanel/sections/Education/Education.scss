@@ -1,0 +1,22 @@
+.education-card {
+   position: relative;
+   padding: 10px 20px;
+   border: 1px solid #c2c3df;
+   border-radius: 8px;
+   margin: 25px 0;
+
+   h4 {
+      margin: 0 0 8px 0;
+      font-size: 24px;
+   }
+
+   .edu-desc {
+      font-style: italic;
+   }
+
+   .action-btns {
+      position: absolute; 
+      top: 5px;
+      right: 0;
+   }
+}

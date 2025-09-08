@@ -1,8 +1,8 @@
 import InputField from '../../../../components/InputField/InputField';
 
-import './GeneralInfo.scss'
+import './GeneralInfo.scss';
 
-interface GeneralInformationEntry {
+export interface GeneralInformationEntry {
    firstName: string;
    lastName: string;
    email: string;
@@ -37,7 +37,7 @@ export default function GeneralInformation({ data, onChange }: GeneralInformatio
 
             <InputField label="City" value={data.city} onChange={(val) => onChange({ ...data, city: val })} />
 
-            <div className="location-container">
+            <div className="bundled-inputs">
                <InputField
                   label="Postal code"
                   value={data.postalCode}

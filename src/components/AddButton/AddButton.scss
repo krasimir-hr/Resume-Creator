@@ -1,0 +1,17 @@
+@import '../../variables';
+
+.add-button {
+   background-color: #fff;
+   color: $button-color;
+   font-weight: 800;
+   transition: filter 0.3s ease;
+   border-radius: 12px;
+   grid-column: span 2;
+   border: 2px dashed $button-color;
+   width: 100%;
+
+   &:hover {
+      filter: brightness(0.85);
+      border: 2px solid $button-color;
+   }
+}

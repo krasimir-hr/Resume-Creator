@@ -1,0 +1,12 @@
+@import '../../variables';
+
+.action-button {
+   background-color: #fff;
+   color: $button-color;
+   border: none;
+   transition: background-color 0.3s ease;
+
+   &:hover {
+      background-color: #e9e9e9;
+   }
+}
